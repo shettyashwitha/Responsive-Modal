@@ -1,0 +1,54 @@
+<div class="outer-wrapper flex-center">
+  <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Open Modal</button>
+</div>
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="flex-center modal-center">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <img src="assets/images/cancel.png" alt="">
+        </button>
+        <h4 class="modal-title"><span class="settings-icon"></span>Settings</h4>
+      </div>
+      <div class="modal-body">
+        <div class="tabs-wrapper">
+          <div class="each-tab" ng-class="{'active': main.currentTab === 'table'}" ng-click="main.currentTab = 'table'">Show table</div>
+          <div class="each-tab" ng-class="{'active': main.currentTab === 'blog'}" ng-click="main.currentTab = 'blog'">Show blog</div>
+        </div>
+        <div class="content-wrapper">
+          <div class="table-wrapper" ng-if="main.currentTab === 'table'">
+            <div class="fixed-table-header">
+              <div class="heading-inner-wrap text-caps">
+                <div class="each-column name">Full Name</div>
+                <div class="each-column id">ID</div>
+                <div class="each-column city">City</div>
+              </div>
+            </div>
+            <div class="data-wrapper">
+              <div class="each-table-content-row" ng-repeat="data in main.people">
+                <div class="each-column name">{{data.name}}</div>
+                <div class="each-column id">{{data.id}}</div>
+                <div class="each-column city">{{data.city}}</div>
+              </div>
+            </div>
+          </div>
+          <div class="blog-wrapper" ng-if="main.currentTab === 'blog'">
+            <div class="info-wrapper">
+              <div class="blogger-name">My Awesome Blog</div>
+              <div class="blog-info">Published on 01/04/2017, Authored by John Doe</div>
+            </div>
+            <div class="blog-content">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi aliquid, laudantium facilis amet fugit harum, ex culpa, quos nam nesciunt tempore ipsum deserunt facere autem vitae quis deleniti numquam odit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima rem quod, sed voluptatem, aliquam alias veniam laboriosam pariatur ipsum, provident est dolore! Laboriosam nisi, et placeat eius perspiciatis molestias, ab. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, perspiciatis aspernatur quaerat dolorem placeat alias error ratione ipsam adipisci nostrum suscipit in, totam quidem blanditiis rerum, maxime. Quasi, error, impedit!
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
