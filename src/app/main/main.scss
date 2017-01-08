@@ -25,8 +25,12 @@ $light-gray: rgb(231,234,236);
 
 .close{
   opacity: 0.8;
+  img {
+    transform: rotate(0deg);
+    transition: transform 0.2s;
+  }
   img:hover {
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
     transition: transform 0.2s;
   }
 }
@@ -152,7 +156,7 @@ $light-gray: rgb(231,234,236);
     width: 41%;
   }
   .content-wrapper {
-    height: 330px;
+    height: 40vh;
   }
 }
 
@@ -160,9 +164,9 @@ $light-gray: rgb(231,234,236);
   .modal-dialog {
     max-width: 700px;
     max-height: 560px;
-    width: 49%;
+    width: 41%;
   }
   .content-wrapper {
-    height: 413px;
+    height: 40vh;
   }
 }
