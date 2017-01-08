@@ -146,6 +146,7 @@ $light-gray: rgb(231,234,236);
 .modal-dialog {
   display: block;
   margin: auto;
+  width: 41%;
 }
 
 .content-wrapper {
@@ -156,13 +157,11 @@ $light-gray: rgb(231,234,236);
   .modal-dialog {
     max-width: 600px;
     min-width: 350px;
-    width: 41%;
   }
 }
 
 @media all and (min-width: 1441px) {
   .modal-dialog {
     max-width: 700px;
-    width: 41%;
   }
 }
